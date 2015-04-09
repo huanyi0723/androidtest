@@ -64,3 +64,37 @@
 3 事件处理
 - Handler 及相关原理
 - AsyncTask
+- 几种监听事件的写法
+
+4 四大组件
+- Activity Fragment
+- Intent
+- ContentProvider
+- Service
+- BroadcastReceiver
+
+5 图形图像处理
+- Drawable
+- Bitmap
+- Canvas Paint Path
+- Frame Tween
+- SurfaceView
+
+6 数据处理
+- SharedPreferences
+- File
+- SQLite
+
+7 网络处理
+- TCP URL
+- HttpURLConnection
+- HttpClient
+- WebView
+
+8 其他很少用到的
+- 多媒体
+- OpenGl
+- 手机桌面
+- 传感器
+- GPS
+- Google Map
