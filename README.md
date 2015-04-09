@@ -18,6 +18,7 @@
 - 绝对布局
 - 网格布局
 - UI控件
+``` java
 	TextView
 	EditText
 	Button //.9.png
@@ -61,6 +62,8 @@
 	ProgressDialog
 
 	ActionBar
+```
+
 ## 3 事件处理
 - Handler 及相关原理
 - AsyncTask
