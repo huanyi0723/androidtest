@@ -9,15 +9,15 @@
 设计模式
 
 先从书本知识说起
-1 开发环境搭建
-2 UI布局
-	线性布局
-	表格布局
-	帧布局
-	相对布局
-	绝对布局
-	网格布局
-  UI控件
+## 1 开发环境搭建
+## 2 UI布局
+- 线性布局
+- 表格布局
+- 帧布局
+- 相对布局
+- 绝对布局
+- 网格布局
+- UI控件
 	TextView
 	EditText
 	Button //.9.png
@@ -61,37 +61,37 @@
 	ProgressDialog
 
 	ActionBar
-3 事件处理
+## 3 事件处理
 - Handler 及相关原理
 - AsyncTask
 - 几种监听事件的写法
 
-4 四大组件
+## 4 四大组件
 - Activity Fragment
 - Intent
 - ContentProvider
 - Service
 - BroadcastReceiver
 
-5 图形图像处理
+## 5 图形图像处理
 - Drawable
 - Bitmap
 - Canvas Paint Path
 - Frame Tween
 - SurfaceView
 
-6 数据处理
+## 6 数据处理
 - SharedPreferences
 - File
 - SQLite
 
-7 网络处理
+## 7 网络处理
 - TCP URL
 - HttpURLConnection
 - HttpClient
 - WebView
 
-8 其他很少用到的
+## 8 其他很少用到的
 - 多媒体
 - OpenGl
 - 手机桌面
