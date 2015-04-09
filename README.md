@@ -61,3 +61,6 @@
 	ProgressDialog
 
 	ActionBar
+3 事件处理
+- Handler 及相关原理
+- AsyncTask
