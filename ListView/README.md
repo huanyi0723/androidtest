@@ -14,11 +14,11 @@ listview.getadapter().getcount()方法返回值会比我们预期的要大，原
 是我们自定义adapter中数据position编号从0开始，也就是说与我们传进去的list的位置是一样的。
 
 代码写法
-private View mListViewHeader;// 头部View 
+			private View mListViewHeader;// 头部View 
 			mListViewHeader = createListViewHeader(mBannerList);
 			mXListView.addHeaderView(mListViewHeader);
 //首页栏
-private View createListViewHeader(List<NewsBanner> bannerList) {
+		private View createListViewHeader(List<NewsBanner> bannerList) {
 		LayoutInflater inflater = LayoutInflater.from(this.getActivity());
 
 		View listviewHeader = inflater.inflate(R.layout.listview_header, null);
@@ -38,3 +38,67 @@ private View createListViewHeader(List<NewsBanner> bannerList) {
 		bannerViewPager.startAutoScroll();
 		return listviewHeader;
 	}
+
+
+判断滑动到顶端还是底部
+	getListView().setOnScrollListener(new OnScrollListener() {  
+            @Override  
+            public void onScrollStateChanged(AbsListView view, int scrollState) {  
+            }  
+  
+            @Override  
+            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {  
+                if(firstVisibleItem==0){  
+                    Log.e("log", "滑到顶部");  
+                }  
+                if(visibleItemCount+firstVisibleItem==totalItemCount){  
+                    Log.e("log", "滑到底部");  
+                }  
+            }  
+        });
+
+//另外一种写法
+mListView.setOnScrollListener(new OnScrollListenerImple());  
+
+private class OnScrollListenerImple implements OnScrollListener{ 
+        @Override 
+        public void onScroll(AbsListView listView, int firstVisibleItem,int visibleItemCount, int totalItemCount) { 
+            int lastItem = firstVisibleItem + visibleItemCount; 
+            if(lastItem == totalItemCount) { 
+                System.out.println("Scroll to the listview last item"); 
+                View lastItemView=(View) listView.getChildAt(listView.getChildCount()-1); 
+                if ((listView.getBottom())==lastItemView.getBottom()) { 
+                    System.out.println("========Scroll to the listview bottom ============="); 
+                    addDataForListView(); 
+                    mSimpleAdapter.notifyDataSetChanged(); 
+                } 
+            } 
+        } 
+   
+        @Override 
+        public void onScrollStateChanged(AbsListView listview, int scrollState) { 
+               
+        } 
+           
+    }  
+
+
+listview.setOnScrollListener(new OnScrollListener(){
+	@Override
+	public void onScrollStateChanged(AbsListView view, int scrollState){
+		// 当不滚动时
+		if (scrollState == OnScrollListener.SCROLL_STATE_IDLE) {
+			// 判断是否滚动到底部
+			if (view.getLastVisiblePosition() == view.getCount() - 1) {
+				//加载更多功能的代码
+			}
+		}
+	}
+});
+
+- 如何判断ListView已添加头部
+目前的方法
+			if (mListViewHeader == null) {
+				mListViewHeader = createListViewHeader(contentDataResp);
+				contentfrag_list.addHeaderView(mListViewHeader);
+			}
