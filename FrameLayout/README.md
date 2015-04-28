@@ -1,0 +1,72 @@
+# 帧布局
+- 组件一个个叠加上去
+
+# 属性
+- android:foreground //前景图像
+- android:foregroundGravity //前景图像位置
+
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!--
+     依次定义6个TextView,先定义的TextView位于底层
+	后定义的TextView位于上层
+    -->
+
+    <TextView
+        android:id="@+id/view01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#f00"
+        android:height="320px"
+        android:width="320px" />
+
+    <TextView
+        android:id="@+id/view02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#0f0"
+        android:height="280px"
+        android:width="280px" />
+
+    <TextView
+        android:id="@+id/view03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#00f"
+        android:height="240px"
+        android:width="240px" />
+
+    <TextView
+        android:id="@+id/view04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#ff0"
+        android:height="200px"
+        android:width="200px" />
+
+    <TextView
+        android:id="@+id/view05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#f0f"
+        android:height="160px"
+        android:width="160px" />
+
+    <TextView
+        android:id="@+id/view06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#0ff"
+        android:height="120px"
+        android:width="120px" />
+
+</FrameLayout>
