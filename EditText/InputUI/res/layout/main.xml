@@ -1,13 +1,3 @@
-# 文本框
-
-# 属性
-- android:textCursorDrawable="@null" //修改EditText的光标颜色 让光标颜色和text color一样
-- android:inputType //输入类型
-- android:selectAllOnFocus 
-
-
-"@null"   是作用是
-
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
