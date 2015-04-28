@@ -1,0 +1,53 @@
+# 按钮
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 文字带阴影的按钮 -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#aa5"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="1"
+        android:text="文字带阴影的按钮"
+        android:textSize="12pt" />
+    <!-- 普通文字按钮 -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/red"
+        android:text="普通按钮"
+        android:textSize="10pt" />
+    <!-- 带文字的图片按钮 -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:text="带文字的图片按钮"
+        android:textSize="11px" />
+
+</LinearLayout>
+
+- 选择器
+- 
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 指定按钮按钮下时的图片 -->
+    <item android:drawable="@drawable/red" android:state_pressed="true"/>
+    <!-- 指定按钮松开时的图片 -->
+    <item android:drawable="@drawable/purple" android:state_pressed="false"/>
+
+</selector>
+
+- .9图片
+
