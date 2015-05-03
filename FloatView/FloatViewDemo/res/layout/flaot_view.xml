@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    
+    
+    <Button
+        android:id="@+id/m_btn"
+        android:layout_width="40dp"
+        android:layout_height="30dp" />
+
+    <ImageView
+        android:id="@+id/mm_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/mm_audio_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/mm_btn"
+        android:layout_width="40dp"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/mm_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

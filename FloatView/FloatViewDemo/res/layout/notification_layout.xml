@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp" >
+
+    <RelativeLayout
+        android:layout_width="64dp"
+        android:layout_height="64dp" >
+
+        <ImageView
+            android:id="@+id/notification_icon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/notification_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="64dp"
+        android:layout_toLeftOf="@+id/notification_btns"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/notification_title_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/notification_body_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="16sp" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/notification_btns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/notification_status"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center" 
+            android:src="@drawable/notification_next"/>
+
+<!--         <ImageView -->
+<!--             android:id="@+id/notification_audio_status" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="wrap_content"  -->
+<!--             android:src="@drawable/notification_next"/> -->
+        
+        
+<!--         <CheckBox -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="wrap_content" /> -->
+    </LinearLayout>
+    
+
+</RelativeLayout>
