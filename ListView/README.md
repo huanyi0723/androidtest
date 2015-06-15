@@ -339,3 +339,8 @@ listview.setOnScrollListener(new OnScrollListener(){
 	}
 });
 
+
+# android listview直接定位到某一行位置 
+
+- listview.setSelection(int position);
+- adapter.notifyDataSetInvalidated();

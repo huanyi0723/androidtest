@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.example.ellipseimage.SelectableRoundedCornersImageView
+        android:id="@+id/img_srciv"
+        android:layout_width="190dp"
+        android:layout_height="160dp"
+        android:src="@drawable/koala"
+        app:leftBottomCornerRadius="20dp"
+        app:leftTopCornerRadius="20dp"
+        app:rightBottomCornerRadius="20dp"
+        app:rightTopCornerRadius="20dp" />
+
+</RelativeLayout>

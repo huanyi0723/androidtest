@@ -98,3 +98,33 @@
         android:text="注册" />
 
 </TableLayout>
+
+
+# Android 手动显示和隐藏软键盘 
+
+---java
+//方法一(如果输入法在窗口上已经显示，则隐藏，反之则显示)
+    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);  
+    imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);  
+//方法二（view为接受软键盘输入的视图，SHOW_FORCED表示强制显示）
+InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+imm.showSoftInput(view,InputMethodManager.SHOW_FORCED);
+//调用隐藏系统默认的输入法
+(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(WidgetSearchActivity.this.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);  
+//(WidgetSearchActivity是当前的Activity)
+获取输入法打开的状态
+InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+boolean isOpen=imm.isActive();//isOpen若返回true，则表示输入法打开
+---
+
+# 换行符
+控件
+<1>如果直接在XML文件中写入"aaaaa\nbbbb"可以换行。
+<2>在Java文件中用textViewObj.setText("aaaa\nbbbb")也可以换行。
+<3>将数据封装到模型类后，在Java文件中使用textViewObj.setText(obj.getXXX()).
+
+# ANDROID中EDITTEXT如何定位光标位置 
+//			comment_input.setText("@" + comment_author + "\n");
+//			int size = comment_input.getText().length();
+//			comment_input.setSelection(size);
+
